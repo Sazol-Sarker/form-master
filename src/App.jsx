@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import SimpleForm from './components/SimpleForm/SimpleForm'
+// import SimpleForm from './components/SimpleForm/SimpleForm'
+import SimpleForm2 from './components/SimpleForm2/SimpleForm2'
+import StatefulForm from './components/StatefulForm/StatefulForm'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
     <>
       
-      <h1 className='text-xl font-bold text-slate-400 m-4'><em>A Simple Form</em></h1>
-     <SimpleForm></SimpleForm>
+      {/* <h1 className='text-xl font-bold text-slate-400 m-4'><em>A Simple Form</em></h1> */}
+     {/* <SimpleForm></SimpleForm> */}
+     {/* <SimpleForm2></SimpleForm2> */}
+     <StatefulForm></StatefulForm>
     </>
   )
 }
