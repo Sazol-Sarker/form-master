@@ -1,5 +1,6 @@
 import './App.css'
-import HookForm from './components/HookForm/HookForm'
+// import HookForm from './components/HookForm/HookForm'
+import ReusableForm from './components/ReusableForm/ReusableForm'
 
 // import RefForm from './components/RefForm/RefForm'
 // import SimpleForm from './components/SimpleForm/SimpleForm'
@@ -7,7 +8,15 @@ import HookForm from './components/HookForm/HookForm'
 // import StatefulForm from './components/StatefulForm/StatefulForm'
 
 function App() {
- 
+ const handleSignUpData=(data)=>{
+const {name,email}=data;
+console.log(name,email);
+ }
+
+ const handleUpdateData=(data)=>{
+  const {name,email}=data;
+  console.log(name,email);
+   }
   return (
     <>
       
@@ -17,8 +26,11 @@ function App() {
      <StatefulForm></StatefulForm>
      <br />
      <RefForm></RefForm> */}
-    <HookForm></HookForm>
+    {/* <HookForm></HookForm> */}
 
+        <ReusableForm formTitle="Sign Up Form" btnText="Sign Up" handleData={handleSignUpData}></ReusableForm>
+        <br />
+        <ReusableForm formTitle="Profile Update Form" btnText="Update" handleData={handleUpdateData}></ReusableForm>
 
     </>
   )
